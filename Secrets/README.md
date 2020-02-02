@@ -23,4 +23,14 @@ kubectl create secret generic [NAME] --from-env-file=[FILE]
 kubectl create secret generic [NAME] --from-literal [KEY]=[VALUE]
 ```
 
+### Get Secrets
 
+```console
+kubectl get secrets
+```
+
+### Get a Description of a Secret
+
+```console
+kubectl get secrets [NAME] -o [JSOM|YAML]
+```
