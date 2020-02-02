@@ -5,6 +5,8 @@
 - This leads to a problem: if some set of Pods (call them “backends”) provides functionality to other Pods (call them “frontends”) inside your cluster, how do the frontends find out and keep track of which IP address to connect to, so that the frontend can use the backend part of the workload?
 - The set of Pods targeted by a Service is usually determined by a selector.
 
+> When a service is created, it's name gets a DNS entry allowing us to access the service using service-name:port.
+
 ## Service Types
 
 1. ClusterIP:
