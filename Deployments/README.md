@@ -1,29 +1,55 @@
 # Deployments
-- A Deployment provides declarative updates for Pods and ReplicaSets. You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate.
 
-#### Create a Deployment:
-> `kubectl create -f [filename] --save-config`
+- A Deployment provides declarative updates for Pods and ReplicaSets.
+- You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate.
+- A ReplicaSet ensures that a specified number of pod replicas are running at any given time. However, a Deployment is a higher-level concept that manages ReplicaSets and provides declarative updates to Pods along with a lot of other useful features.
 
-#### Create or Update a Deployment:
-> `kubectl apply -f [filename]`
+## Commands
 
-#### List All Deployments:
-> `kubectl get deployments`
+### Create a Deployment
 
-#### List All Deployments with Labels:
-> `kubectl get deployments --show-labels`
+```console
+kubectl create -f [filename] --save-config
+```
 
-#### Retrieve Deployments with a Specific Label:
-> `kubectl get deployments -l <key>=<value>`
+### Create or Update a Deployment
 
-#### Delete Deployment:
-> `kubectl delete deployments [name]`
+```console
+kubectl apply -f [filename]
+```
 
-#### Scale Deployment:
-> `kubectl scale deployment [name] --replicas=[no-of-replicas]`
+### List All Deployments
 
-#### Scale By Referencing the YAML:
-> `kubectl scale -f [name] --replicas=[no-of-replicas]`
+```console
+kubectl get deployments
+```
 
-#### Scale Deployment:
-> `kubectl scale deployment [name] --replicas=[no-of-replicas]`
+### List All Deployments with Labels
+
+```console
+kubectl get deployments --show-labels
+```
+
+### Retrieve Deployments with a Specific Label
+
+```console
+kubectl get deployments -l <key>=<value>
+```
+
+### Delete Deployment
+
+```console
+kubectl delete deployments [name]
+```
+
+### Scale Deployment
+
+```console
+kubectl scale deployment [name] --replicas=[no-of-replicas]
+```
+
+### Scale By Referencing the YAML
+
+```console
+kubectl scale -f [name] --replicas=[no-of-replicas]
+```
