@@ -53,3 +53,29 @@ kubectl scale deployment [name] --replicas=[no-of-replicas]
 ```console
 kubectl scale -f [name] --replicas=[no-of-replicas]
 ```
+
+## Rolling Back
+
+### Rollout History
+
+```console
+kubectl rollout history deployment [name]
+```
+
+### Rollout Status
+
+```console
+kubectl rollout status deployment [name]
+```
+
+### Rollout History for a Specific Revision
+
+```console
+kubectl rollout history deployment [name] --revision=[revision]
+```
+
+### Rollback to a Previous Revision
+
+```console
+kubectl rollout undo deployment [name] [--revision=[revision]]
+```
